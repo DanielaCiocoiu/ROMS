@@ -1,7 +1,7 @@
 package com.home.ROMS.controller;
 
 import com.home.ROMS.domain.Restaurant;
-import com.home.ROMS.service.RestaurantService;
+import com.home.ROMS.service.restaurant.RestaurantService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 

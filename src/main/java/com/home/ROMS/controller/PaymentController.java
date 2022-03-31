@@ -1,7 +1,7 @@
 package com.home.ROMS.controller;
 
 import com.home.ROMS.domain.Payment;
-import com.home.ROMS.service.PaymentService;
+import com.home.ROMS.service.payment.PaymentService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 

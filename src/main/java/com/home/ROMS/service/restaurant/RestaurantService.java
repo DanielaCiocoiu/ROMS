@@ -1,9 +1,7 @@
-package com.home.ROMS.service;
+package com.home.ROMS.service.restaurant;
 
-import com.home.ROMS.domain.Order;
 import com.home.ROMS.domain.Restaurant;
-import com.home.ROMS.repository.OrderRepository;
-import com.home.ROMS.repository.RestaurantRepository;
+import com.home.ROMS.service.restaurant.RestaurantRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

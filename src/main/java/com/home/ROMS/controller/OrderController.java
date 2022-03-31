@@ -1,7 +1,7 @@
 package com.home.ROMS.controller;
 
 import com.home.ROMS.domain.Order;
-import com.home.ROMS.service.OrderService;
+import com.home.ROMS.service.order.OrderService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
