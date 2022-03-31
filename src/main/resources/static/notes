@@ -1,0 +1,55 @@
+   {
+        "id": 0,
+        "firstName": "Ana",
+        "lastName": "Mihaila",
+        "password": "4444",
+        "credits": 20,
+        "address":{
+            "street":"Bd. Timisoara",
+            "nr":"4"
+                   }
+    }
+
+    {
+            "id": 0,
+            "firstName": "Maria",
+            "lastName": "Ilinaca",
+            "password": "4444",
+            "credits": 100,
+            "address":{
+                "street":"Bd. Alamei",
+                "nr":"4"
+       }
+   }
+
+      {
+            "id": 0,
+            "billNo": "1",
+            "menu": "Supe",
+            "quantity": "5",
+            "orderedTime": "12-05-2021"
+        }
+      {
+            "id": 0,
+            "billNo": "2",
+            "menu": "Papanasi",
+            "quantity": "5",
+            "orderedTime": "12-05-2021"
+        }
+
+          {
+                "id": 0,
+                "restaurantName": "Indi"
+          }
+
+            {
+                  "id": 0,
+                  "restaurantName": "Miramar"
+            }
+
+
+   {
+        "id": 0,
+        "price": "1000",
+        "Category": "PASTA"
+    }

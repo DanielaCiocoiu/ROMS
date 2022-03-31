@@ -1,6 +1,6 @@
-package com.home.ROMS.domain;
+package com.home.ROMS.domain.user;
 
-import com.home.ROMS.domain.Address.Address;
+import com.home.ROMS.domain.Order;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -73,27 +73,37 @@ public class User {
         this.address = address;
     }
 
+    public List<Order> getServiceOrders() {
+        return serviceOrders;
+    }
+
+    public void setServiceOrders(List<Order> serviceOrders) {
+        this.serviceOrders = serviceOrders;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof User)) return false;
         User user = (User) o;
-        return credits == user.credits && Objects.equals(firstName, user.firstName) && Objects.equals(lastName, user.lastName) && Objects.equals(password, user.password) && Objects.equals(address, user.address);
+        return credits == user.credits && Objects.equals(id, user.id) && Objects.equals(firstName, user.firstName) && Objects.equals(lastName, user.lastName) && Objects.equals(password, user.password) && Objects.equals(address, user.address) && Objects.equals(serviceOrders, user.serviceOrders);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(firstName, lastName, password, credits, address);
+        return Objects.hash(id, firstName, lastName, password, credits, address, serviceOrders);
     }
 
     @Override
     public String toString() {
         return "User{" +
-                "firstName='" + firstName + '\'' +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", password='" + password + '\'' +
                 ", credits=" + credits +
                 ", address=" + address +
+                ", serviceOrders=" + serviceOrders +
                 '}';
     }
 }

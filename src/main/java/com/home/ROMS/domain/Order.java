@@ -1,11 +1,14 @@
 package com.home.ROMS.domain;
 
+import com.home.ROMS.domain.user.User;
+
 import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
 @Entity
+@Table(name = "order_table")
 public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -71,17 +74,41 @@ public class Order {
         this.orderedTime = orderedTime;
     }
 
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
+
+    public Set<Product> getProducts() {
+        return products;
+    }
+
+    public void setProducts(Set<Product> products) {
+        this.products = products;
+    }
+
+    public Payment getPayment() {
+        return payment;
+    }
+
+    public void setPayment(Payment payment) {
+        this.payment = payment;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Order)) return false;
         Order order = (Order) o;
-        return id == order.id && quantity == order.quantity && Objects.equals(billNo, order.billNo) && Objects.equals(menu, order.menu) && Objects.equals(orderedTime, order.orderedTime);
+        return id == order.id && quantity == order.quantity && Objects.equals(billNo, order.billNo) && Objects.equals(menu, order.menu) && Objects.equals(orderedTime, order.orderedTime) && Objects.equals(user, order.user) && Objects.equals(products, order.products) && Objects.equals(payment, order.payment);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, billNo, menu, quantity, orderedTime);
+        return Objects.hash(id, billNo, menu, quantity, orderedTime, user, products, payment);
     }
 
     @Override
@@ -92,6 +119,9 @@ public class Order {
                 ", menu='" + menu + '\'' +
                 ", quantity=" + quantity +
                 ", orderedTime='" + orderedTime + '\'' +
+                ", user=" + user +
+                ", products=" + products +
+                ", payment=" + payment +
                 '}';
     }
 }

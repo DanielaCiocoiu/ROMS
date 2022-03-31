@@ -1,4 +1,4 @@
-package com.home.ROMS.domain.Address;
+package com.home.ROMS.domain.user;
 
 import javax.persistence.Embeddable;
 import java.util.Objects;
@@ -8,7 +8,7 @@ public class Address {
 
     private String street;
 
-    private String number;
+    private int number;
 
     public Address() {
     }
@@ -21,11 +21,11 @@ public class Address {
         this.street = street;
     }
 
-    public String getNumber() {
+    public int getNumber() {
         return number;
     }
 
-    public void setNumber(String number) {
+    public void setNumber(int number) {
         this.number = number;
     }
 
