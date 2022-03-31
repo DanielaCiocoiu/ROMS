@@ -1,8 +1,10 @@
 package com.home.ROMS.domain.user;
 
 import com.home.ROMS.domain.Order;
+import com.home.ROMS.validation.ValidPassword;
 
 import javax.persistence.*;
+import javax.validation.constraints.*;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -13,11 +15,21 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @NotNull
+    @NotBlank
+    @Size(min = 2, max = 30)
     private String firstName;
+    @NotNull
+    @NotBlank
+    @Size(min = 2, max = 30)
     private String lastName;
+    @Size(min = 8, max = 30)
+    @ValidPassword
     private String password;
+    @NotNull
     private int credits;
     @Embedded
+    @NotNull
     private Address address;
 
     @OneToMany(mappedBy = "user")
