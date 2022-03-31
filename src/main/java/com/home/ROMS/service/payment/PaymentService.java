@@ -1,9 +1,6 @@
-package com.home.ROMS.service;
+package com.home.ROMS.service.payment;
 
-import com.home.ROMS.domain.Order;
 import com.home.ROMS.domain.Payment;
-import com.home.ROMS.repository.OrderRepository;
-import com.home.ROMS.repository.PaymentRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

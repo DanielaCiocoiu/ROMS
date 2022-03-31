@@ -1,7 +1,7 @@
 package com.home.ROMS.controller;
 
 import com.home.ROMS.domain.Product;
-import com.home.ROMS.service.ProductService;
+import com.home.ROMS.service.product.ProductService;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 

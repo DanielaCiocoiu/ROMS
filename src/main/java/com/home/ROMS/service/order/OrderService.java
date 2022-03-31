@@ -1,7 +1,6 @@
-package com.home.ROMS.service;
+package com.home.ROMS.service.order;
 
 import com.home.ROMS.domain.Order;
-import com.home.ROMS.repository.OrderRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

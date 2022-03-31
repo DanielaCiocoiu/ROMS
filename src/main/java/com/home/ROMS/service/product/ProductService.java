@@ -1,7 +1,6 @@
-package com.home.ROMS.service;
+package com.home.ROMS.service.product;
 
 import com.home.ROMS.domain.Product;
-import com.home.ROMS.repository.ProductRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
